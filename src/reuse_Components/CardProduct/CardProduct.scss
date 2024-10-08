@@ -1,0 +1,233 @@
+@mixin display {
+  display: flex;
+  flex-direction: column;
+}
+@mixin bgdIcon {
+  background: #f6f6f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cardProducts {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 300px));
+  .cardProduct {
+    height: 400px;
+    padding: 0 25px;
+    z-index: 1;
+    justify-content: center;
+    background-color: white;
+    text-align: center;
+    color: #3c4043;
+    border-right: 1px black solid;
+    border-bottom: 1px black solid;
+    &:first-child {
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
+    &:last-child {
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+    &-img {
+      margin: 0 auto;
+      position: relative;
+    }
+    &-right {
+      position: absolute;
+      right: 10px;
+      top: 20px;
+      @include display;
+      align-items: flex-end;
+    }
+    &-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      @include bgdIcon;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+    &-comments {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &-commentsInfo {
+      display: flex;
+      align-items: center;
+      font-family: 'Aeroport-Light';
+      color: #ff0100;
+    }
+    &-commentsCount {
+      margin-left: 10px;
+    }
+    &-name {
+      margin-top: 10px;
+      height: 90px;
+    }
+    &-nameLink {
+      text-decoration: none;
+      color: black;
+      font-size: 16px;
+    }
+    &-nameBrand {
+      font-family: 'Aeroport-Bold';
+    }
+    &-pay {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &-payNum {
+      font-family: 'Aeroport-Medium';
+    }
+    &-iconShop {
+      @include bgdIcon;
+      width: 60px;
+      height: 34px;
+      border-radius: 50px;
+      cursor: pointer;
+    }
+    &-basketTrue {
+      background: #3c4043;
+    }
+    &-basketFalse {
+      background: #878b8e;
+    }
+  }
+  .cardProduct9 {
+    &:first-child {
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
+    &:last-child {
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+    &:nth-of-type(1) {
+      border-bottom-left-radius: 0;
+    }
+    &:nth-of-type(3) {
+      border-top-right-radius: 10px;
+    }
+    &:nth-of-type(7) {
+      border-bottom-left-radius: 10px;
+    }
+    &:nth-of-type(9) {
+      border-bottom-right-radius: 10px;
+      border-top-right-radius: 0;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .cardProducts .cardProduct9 {
+    border-radius: 10px;
+  }
+}
+@media (max-width: 950px) {
+  .cardProducts .cardProduct9:nth-child(1) {
+    border-radius: 10px;
+  }
+}
+@media (max-width: 650px) {
+  .cardProducts {
+    grid-template-columns: 1fr;
+    .cardProduct {
+      padding: 0;
+      height: auto;
+      &-dots {
+        background: #c4c4c4;
+        width: 6px;
+        height: 6px;
+        margin-left: 9px;
+        border-radius: 50%;
+      }
+      &-dotsActive {
+        background-color: #ff0100;
+      }
+      &-infos {
+        padding: 0 16px;
+      }
+      &:first-child {
+        border-radius: 0;
+      }
+      &:last-child {
+        border-radius: 0;
+      }
+      &-pay {
+        margin-bottom: 10px;
+      }
+      &-iconPhone {
+        width: 20px;
+        height: 20px;
+      }
+      &-iconCommentsPhone {
+        width: 12px;
+        height: 12px;
+      }
+      &-iconShop {
+        width: 44px;
+        height: 25px;
+      }
+      &-icon {
+        width: 28px;
+        height: 28px;
+      }
+      &-nameBrand,
+      &-nameLink {
+        font-size: 14px;
+      }
+    }
+    .react-multi-carousel-dot-list {
+      position: relative;
+      top: 20px;
+    }
+    .cardProduct9 {
+      border-radius: 0;
+      &:first-child,
+      &:last-child,
+      &:nth-child(3),
+      &:nth-child(7) {
+        border-radius: 0;
+      }
+    }
+  }
+}
+@media (max-width: 480px) {
+  .cardProducts {
+    .cardProduct {
+      &-img img {
+        // height: 130px;
+        margin: 0 auto;
+      }
+      &-infos {
+        padding: 0 10px;
+      }
+      &-name {
+        margin: 5px 0 10px;
+        height: 60px;
+      }
+      &-nameBrand,
+      &-nameLink {
+        font-size: 12px;
+      }
+      &-payNum {
+        font-size: 14px;
+      }
+      &-pay {
+        margin-bottom: 10px;
+      }
+
+      &-commentsCount {
+        font-size: 12px;
+      }
+
+      &-right {
+        right: 7vw;
+      }
+    }
+  }
+}

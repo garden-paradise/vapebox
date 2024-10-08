@@ -1,0 +1,41 @@
+.menuArticleBlogs {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 590px));
+  grid-gap: 30px 20px;
+  color: white;
+  justify-content: center;
+}
+.menuArticleBlog {
+  // &-aspectRatio {
+  //   width: 590px;
+  //   height: 300px;
+  //   border-radius: 10px;
+  // }
+  &-title {
+    font-family: 'Gilroy-Medium';
+    margin: 30px 0 20px;
+    font-size: 28px;
+  }
+  &-subtitle {
+    color: #d9d9d9;
+    margin-right: 100px;
+  }
+}
+
+@media (max-width: 680px) {
+  .menuArticleBlog {
+    &-aspectRatio {
+      max-width: 100%;
+    }
+    &-subtitle {
+      margin-right: 0;
+    }
+  }
+}
+@media (max-width: 480px) {
+  .menuArticleBlog {
+    &-title {
+      font-size: 20px;
+    }
+  }
+}

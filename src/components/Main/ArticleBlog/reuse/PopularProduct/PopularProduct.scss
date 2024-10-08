@@ -1,0 +1,51 @@
+.popularProduct {
+  width: 387px;
+  padding: 30px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  border-radius: 10px 10px 0 0 ;
+  &:not(:last-child) {
+    border-bottom: 0.5px solid;
+    border-image: linear-gradient(to right, #5584ff, #9d60ff) 47% 0%;
+  }
+  & {
+    // border-top-left-radius: 10px;
+    // border-top-right-radius: 10px;
+  }
+  &:last-child {
+    border-radius: 0 0 10px 10px;
+  }
+  &-img {
+    width: 60px;
+    height: 90px;
+    background-color: #a99e9e;
+  }
+  &-content {
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+  }
+  &-price {
+    margin-top: 28px;
+  }
+  &-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &-price {
+    font-family: 'Aeroport-Medium';
+  }
+  &-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #f6f6f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+}

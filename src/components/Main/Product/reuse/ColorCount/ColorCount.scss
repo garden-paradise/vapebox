@@ -1,0 +1,30 @@
+.colorCount {
+  display: flex;
+  height: 25px;
+  &-block {
+    width: 6px;
+    margin-left: 6px;
+  }
+  .red {
+    background: red;
+  }
+  .yellow {
+    background: rgba(237, 247, 53, 0.843);
+  }
+  .green {
+    background: rgb(83, 214, 83);
+  }
+  .grey {
+    background: rgb(171, 166, 166);
+  }
+}
+
+@media (max-width: 480px) {
+  .colorCount {
+    height: 15px;
+    &-block {
+      width: 4px;
+      margin-left: 3px;
+    }
+  }
+}

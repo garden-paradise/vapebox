@@ -1,0 +1,382 @@
+@mixin Dropdown {
+  font-size: 18px;
+  background: white;
+  width: 285px;
+  color: black;
+  cursor: pointer;
+  line-height: 50px;
+  border-radius: 5px;
+  padding: 0 20px;
+}
+
+.сomparison {
+  color: white;
+  &-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  &-title div:nth-of-type(1) {
+    color: #d9d9d9;
+    font-size: 16px;
+  }
+  &-title div:nth-of-type(2) {
+    cursor: pointer;
+  }
+  &-title div span {
+    margin-left: 20px;
+    font-family: 'Aeroport-Light';
+    font-size: 14px;
+  }
+  &-prod {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    border-image: linear-gradient(to right, #5584ff, #9d60ff) 47% 0%;
+    border-bottom: 0.5px solid;
+    position: relative;
+  }
+  &-dropdownControl {
+    @include Dropdown;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-dropdownMenu {
+    position: absolute;
+    z-index: 2;
+  }
+  &-dropdownOption {
+    font-size: 18px;
+    background: white;
+    width: 285px;
+    color: black;
+    cursor: pointer;
+    line-height: 50px;
+    padding: 0 20px;
+    border-bottom: solid black 0.5px;
+  }
+  &-dropdownOption:first-child {
+    border-radius: 5px 5px 0 0;
+  }
+  &-dropdownOption:last-child {
+    border-radius: 0 0 5px 5px;
+  }
+  &-dropdownClosed,
+  &-dropdownOpen {
+    border: solid black;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 3px;
+  }
+  &-dropdownClosed {
+    top: 8px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+  &-dropdownOpen {
+    top: 12px;
+    transform: rotate(-455deg);
+    -webkit-transform: rotate(-135deg);
+  }
+  &-prodLeftCheckbox {
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+    font-size: 16px;
+  }
+  &-circles label {
+    font-size: 16px;
+    font-family: 'Aeroport-Medium';
+  }
+  &-circles {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 120px;
+    left: 30px;
+    top: 250px;
+  }
+  &-circles section {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: red;
+  }
+  &-circlesPrev,
+  &-circlesNext {
+    width: 15px;
+    height: 15px;
+    border-top: 2px solid #fdfdfd;
+    border-right: 2px solid #ffffff;
+    margin-top: 17px;
+  }
+  &-circlesPrev {
+    transform: rotate(-135deg);
+    margin-left: 20px;
+  }
+  &-circlesNext {
+    transform: rotate(45deg);
+    margin-left: 13px;
+  }
+  &-circles section:hover {
+    background-color: #ff8585;
+  }
+  &-prodRight {
+    width: 840px;
+  }
+  &-prodRightText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &-carouselItem {
+    display: flex;
+    justify-content: flex-end;
+  }
+  &-characteristic {
+    background: white;
+    border-radius: 20px;
+    margin-top: 42px;
+    padding: 30px 20px 20px;
+    color: black;
+  }
+  &-characteristicSub {
+    width: 300px;
+    padding: 12px 30px;
+  }
+  &-characteristicSub:not(:last-child) {
+    margin-bottom: 28px;
+    padding: 12px 30px;
+  }
+  &-characteristicSub:hover {
+    background: #1f1f1f;
+    color: white;
+    transition: 0.4s;
+    width: 100%;
+    position: relative;
+  }
+  &-characteristicBlock {
+    display: flex;
+  }
+  &-tableSection {
+    margin-top: 42px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px 20px 15px;
+  }
+  &-tableSectionTitle {
+    font-family: 'Aeroport-Medium';
+    font-size: 28px;
+    color: black;
+    padding-left: 30px;
+  }
+  &-table {
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    margin-top: 10px;
+    padding: 12px 0;
+    align-items: center;
+  }
+  &-table:hover {
+    background: #1f1f1f;
+    cursor: pointer;
+    color: white;
+  }
+  th {
+    padding-left: 30px;
+  }
+  tr {
+    width: 300px;
+    display: flex;
+    align-items: center;
+  }
+  tbody {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@mixin Flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card {
+  color: black;
+  width: 259px;
+  height: 324px;
+  border-radius: 10px;
+  background: white;
+  position: relative;
+  &:not(:last-child) {
+    margin-right: 18px;
+  }
+  &-1block,
+  &-2block {
+    @include Flex;
+  }
+  &-1blockHeart {
+    width: 40px;
+    height: 40px;
+    background: #f6f6f6;
+    border-radius: 50%;
+    cursor: pointer;
+    @include Flex;
+    position: absolute;
+    top: 12px;
+    left: 14px;
+  }
+  &-1blockHeart img {
+    margin: 0 auto;
+  }
+  &-1blockDelete {
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 24px;
+  }
+  &-1blockDelete:hover {
+    color: red;
+  }
+  &-info {
+    padding: 0 20px 10px;
+  }
+  &-img {
+    margin: 0 auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  &-title {
+    margin: 0 auto 22px;
+    text-align: center;
+    font-size: 16px;
+  }
+  &-2blockShop {
+    @include Flex;
+    border-radius: 50px;
+    background-color: #3c4043;
+    width: 60px;
+    height: 34px;
+    padding-left: 15px;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 1199px) {
+  .сomparison {
+    &-prod {
+      flex-direction: column;
+      padding-bottom: 70px;
+    }
+    &-prodRight {
+      margin: 0 auto;
+    }
+    &-circles {
+      position: relative;
+      left: 0px;
+      top: 30px;
+      margin: 0 auto;
+    }
+    &-carouselItem {
+      justify-content: center;
+    }
+    &-table {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    thead {
+      margin-bottom: 20px;
+    }
+    tbody {
+      margin-left: 30px;
+    }
+    tr {
+      width: 30vw;
+    }
+  }
+}
+@media (max-width: 900px) {
+  .сomparison {
+    &-prodRight {
+      width: 600px;
+    }
+  }
+}
+@media (max-width: 650px) {
+  section .сomparison {
+    padding: 0;
+  }
+  section .сomparison .title,
+  section .сomparison .nav,
+  section .сomparison-prodLeft,
+  section .сomparison-title {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .сomparison {
+    &-prodRight {
+      width: 100%;
+    }
+  }
+}
+@media (max-width: 530px) {
+  .card {
+    height: auto;
+    border-radius: 0;
+  }
+}
+@media (max-width: 480px) {
+  section .сomparison .title,
+  section .сomparison-prodLeft,
+  section .сomparison-title,
+  section .сomparison .arrowTitle {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .сomparison {
+    &-circles {
+      margin: 0 auto 0;
+      width: 100px;
+    }
+    &-circles section {
+      width: 40px;
+      height: 40px;
+    }
+    &-circlesPrev,
+    &-circlesNext {
+      width: 13px;
+      height: 13px;
+      border-top: 2px solid #fdfdfd;
+      border-right: 2px solid #ffffff;
+      margin-top: 13px;
+    }
+    &-circlesPrev {
+      margin-left: 16px;
+    }
+    &-circlesNext {
+      margin-left: 11px;
+    }
+  }
+  .card {
+    &-info {
+      padding: 0 10px 10px;
+    }
+    &-title {
+      font-size: 12px;
+      margin: 0 auto 12px;
+    }
+    &-2blockShop {
+      width: 44px;
+      height: 25px;
+      padding-left: 12px;
+    }
+    &-2blockShop img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

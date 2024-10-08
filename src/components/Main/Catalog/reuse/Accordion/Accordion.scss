@@ -1,0 +1,23 @@
+.catalog {
+  color: black;
+  margin: 0;
+}
+
+.catalogCollapsible,
+.catalogCollapsible_open {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  cursor: pointer;
+}
+.catalogCollapsible_outer {
+  border-bottom: 1px solid #c4c4c4;
+}
+.catalogCollapsible img {
+  transform: rotate(0);
+  transition: 0.5s;
+}
+.catalogCollapsible_open img {
+  transform: rotate(180deg);
+  transition: 0.5s;
+}

@@ -1,0 +1,94 @@
+.favoritesProduct {
+  border-bottom: 0.5px solid;
+  border-image: linear-gradient(to right, #5584ff, #9d60ff) 47% 0%;
+  max-width: 838px;
+  &-delete {
+    color: white;
+    width: 12px;
+    position: relative;
+    top: 20px;
+    right: -98%;
+    cursor: pointer;
+  }
+  &-delete:hover {
+    color: red;
+    transition: 0.5s;
+  }
+  .favoritesProduct_info {
+    width: 93%;
+    padding: 10px 0 20px;
+    color: white;
+    font-family: 'Aeroport-Medium';
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-count {
+      font-family: 'Aeroport-Light';
+    }
+    &-sum {
+      font-size: 22px;
+    }
+    &-infoBlock {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 32%;
+    }
+    &-info {
+      display: flex;
+      justify-content: space-between;
+      width: 80%;
+    }
+    &-flavor {
+      font-size: 14px;
+      color: #c4c4c4;
+      margin-top: 5px;
+    }
+    &-shoppingBlock {
+      border-radius: 50px;
+      width: 50px;
+      height: 35px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+    &-basketTrue {
+      background: #3c4043;
+    }
+    &-basketFalse {
+      background: #878b8e;
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .favoritesProduct {
+    .favoritesProduct_info {
+      width: 100%;
+    }
+  }
+}
+@media (max-width: 550px) {
+  .favoritesProduct {
+    background-color: white;
+    padding: 0 16px;
+    &-delete {
+      color: black;
+    }
+    .favoritesProduct_info {
+      width: 100%;
+      color: black;
+      &-info {
+        flex-direction: column;
+      }
+      &-infoBlock {
+        margin-top: 20px;
+        width: 100%;
+      }
+      &-shoppingBlock {
+        width: 44px;
+      }
+    }
+  }
+}

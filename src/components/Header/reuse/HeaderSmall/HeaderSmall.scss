@@ -1,0 +1,190 @@
+.headerSmall {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 47px 0 30px;
+  &-right {
+    display: flex;
+    justify-content: space-between;
+    width: 90px;
+  }
+  &-form {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+    background: #1f1f1f;
+  }
+  &-input {
+    border: 0;
+    width: 610px;
+    height: 38px;
+    border-radius: 20px;
+    position: relative;
+    left: 23px;
+  }
+  &-formImg {
+    outline: none;
+    position: relative;
+    right: 23px;
+    padding: 5px 10px;
+    background-color: #ec213e;
+    border-radius: 20px;
+  }
+}
+
+.forms {
+  width: 460px;
+  background: white;
+  padding: 30px 20px;
+  border-radius: 5px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  &-backdrop {
+    position: fixed;
+    background-color: #000;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.6;
+    cursor: pointer;
+    z-index: 3;
+  }
+  &-title {
+    font-size: 20px;
+    font-family: 'Aeroport-Medium';
+    margin-bottom: 10px;
+  }
+  &-subtitle {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  &-input {
+    width: 100%;
+    height: 50px;
+    border: 0;
+    background: #e2dfdf;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  &-btn {
+    margin-top: 10px;
+    width: 100%;
+    background: #3c4043;
+    color: white;
+  }
+  &-infoTop {
+    padding: 15px 0 6px;
+  }
+  &-info {
+    color: #979797;
+    font-size: 10px;
+  }
+  &-info div {
+    margin-bottom: 6px;
+  }
+  &-info span:first-child {
+    margin-right: 10px;
+  }
+  &-info span:last-child {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  &-block {
+    vertical-align: middle;
+    line-height: 50px;
+    width: 100%;
+    border-radius: 5px;
+    background: #3c4043;
+    color: white;
+    font-size: 16px;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  &-exit {
+    cursor: pointer;
+    font-family: 'Aeroport-Medium';
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  &-error {
+    border: 1px solid red;
+  }
+}
+
+.Menu {
+  position: fixed;
+  width: 100%;
+  background: white;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  -webkit-transition: left 0.5s;
+  -o-transition: left 0.5s;
+  transition: left 0.5s;
+  -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  margin-top: 120px;
+  z-index: 2;
+}
+.MenuBtn {
+  color: #fff;
+  cursor: pointer;
+  width: 32px;
+}
+.MenuBtn span {
+  display: block;
+  height: 1px;
+  background-color: #fff;
+  -webkit-transition: all 0.1s linear 0.23s;
+  -o-transition: all 0.1s linear 0.23s;
+  transition: all 0.1s linear 0.23s;
+  margin: 0 0 5px;
+}
+.MenuInput:checked ~ .MenuBtn span {
+  background-color: rgb(255, 255, 255);
+}
+.MenuInput:checked ~ .Menu {
+  left: 0;
+}
+.MenuInput:checked ~ .MenuBtn span.first {
+  -webkit-transform: rotate(45deg);
+  margin-top: 10px;
+}
+.MenuInput:checked ~ .MenuBtn span.second {
+  opacity: 0;
+}
+.MenuInput:checked ~ .MenuBtn span.third {
+  -webkit-transform: rotate(-45deg);
+  margin-top: -12px;
+}
+
+@media (max-width: 480px) {
+  .headerSmall {
+    &-logo {
+      width: 40vw;
+    }
+    &-right img {
+      width: 22px;
+    }
+    &-right {
+      width: 50px;
+    }
+  }
+  .forms {
+    &-backdrop {
+      opacity: 0;
+    }
+  }
+  .Menu {
+    margin-top: 100px;
+  }
+  .MenuBtn {
+    width: 22px;
+  }
+}

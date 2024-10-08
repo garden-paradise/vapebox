@@ -1,0 +1,112 @@
+@mixin Width {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+.about {
+  font-size: 20px;
+  max-width: 1336px;
+  margin: 0 auto;
+  &-about,
+  &-blockquote,
+  &-section {
+    @include Width;
+  }
+  &-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  &-sectionCenter {
+    align-items: center;
+  }
+  &-info {
+    max-width: 544px;
+    color: white;
+  }
+  &-info div {
+    margin-bottom: 30px;
+  }
+  &-title {
+    font-size: 30px;
+  }
+  &-blockquote {
+    background: url('./../../../images/main/about/fon3.png') no-repeat left
+      center;
+    height: 400px;
+    margin: 100px auto;
+    font-size: 40px;
+    color: white;
+    padding: 0 147px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &-sectionWhite {
+    background-color: white;
+    padding: 52px 0;
+  }
+  &-infoBlack {
+    color: black;
+    max-width: 488px;
+  }
+  &-infoBlack div {
+    margin-bottom: 30px;
+  }
+  &-marker {
+    font-size: 24px;
+    font-family: 'Aeroport-Bold';
+  }
+  &-command {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .about {
+    &-section {
+      align-items: flex-start;
+    }
+    &-sectionCenter {
+      margin-top: 30px;
+    }
+    &-sectionWhite {
+      padding: 50px;
+    }
+    &-sectionWhite &-section div:last-child {
+      margin-top: 30px;
+    }
+  }
+}
+@media (max-width: 1000px) {
+  .about {
+    &-sectionWhite {
+      padding: 50px 25px;
+    }
+    &-blockquote {
+      margin: 50px auto;
+      padding: 0 50px;
+    }
+  }
+}
+@media (max-width: 480px) {
+  .about {
+    font-size: 16px;
+    &-title {
+      font-size: 20px;
+    }
+    &-blockquote {
+      height: 300px;
+      font-size: 20px;
+    }
+    &-marker {
+      font-size: 18px;
+    }
+    &-command {
+      margin-top: 0;
+    }
+    &-sectionWhite {
+      padding: 50px 16px;
+    }
+  }
+}

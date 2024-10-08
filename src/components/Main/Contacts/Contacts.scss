@@ -1,0 +1,89 @@
+@mixin Form {
+  background-color: #f6f6f6;
+  border: 0;
+  border-radius: 5px;
+  font-family: 'Aeroport-Light';
+}
+
+.сontacts {
+  &-section {
+    display: flex;
+  }
+  &-title {
+    font-size: 28px;
+    color: white;
+    margin-bottom: 30px;
+  }
+  &-payForm {
+    display: flex;
+    flex-direction: column;
+  }
+  &-forms {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 285px);
+    grid-gap: 20px;
+  }
+  &-form {
+    height: 50px;
+    @include Form;
+  }
+  &-formError {
+    border: 2px solid red;
+  }
+  &-formMessage {
+    @include Form;
+    height: 210px;
+    width: 590px;
+    margin: 20px 0;
+  }
+  &-formLabel {
+    font-family: 'Aeroport';
+    font-size: 14px;
+    color: #979797;
+  }
+  &-formBtn {
+    background-color: #ff0100;
+    color: white;
+    margin-top: 10px;
+  }
+  &-address {
+    margin-left: 120px;
+  }
+  &-addressInfo {
+    max-width: 416px;
+    color: #d9d9d9;
+  }
+  &-addressInfoTel {
+    color: #d9d9d9;
+  }
+  &-addressInfo div {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .сontacts {
+    &-section {
+      flex-direction: column-reverse;
+    }
+    &-address {
+      margin: 0 0 50px 0;
+    }
+  }
+}
+@media (max-width: 650px) {
+  .сontacts {
+    &-forms {
+      grid-template-columns: 1fr;
+    }
+    &-formMessage {
+      max-width: 100%;
+    }
+    &-title {
+      font-size: 20px;
+    }
+    &-formBtn {
+      margin: 0 auto;
+    }
+  }
+}

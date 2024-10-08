@@ -1,0 +1,29 @@
+.title {
+  padding: 50px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-family: 'RobotoCondensed';
+  &-name {
+    font-size: 40px;
+    color: white;
+  }
+  &-link {
+    font-size: 16px;
+  }
+  &-black {
+    color: #1f1f1f;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    padding-bottom: 20px;
+    &-name {
+      font-size: 26px;
+    }
+    &-link {
+      font-size: 14px;
+    }
+  }
+}

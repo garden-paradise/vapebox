@@ -1,0 +1,22 @@
+.arrowTitle {
+  display: none;
+  &-title {
+    color: #979797;
+    font-size: 16px;
+    margin-left: 16px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .arrowTitle {
+    display: flex;
+    align-items: center;
+  }
+}
+@media (max-width: 480px) {
+  .arrowTitle {
+    &-title {
+      font-size: 12px;
+    }
+  }
+}

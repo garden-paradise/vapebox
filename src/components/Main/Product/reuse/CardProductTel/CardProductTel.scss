@@ -1,0 +1,60 @@
+@import '~react-image-gallery/styles/scss/image-gallery.scss';
+
+.cardProductTel {
+  &-name {
+    font-size: 24px;
+    margin: 20px 0 10px;
+  }
+  &-info {
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+    color: rgba(151, 151, 151, 1);
+    font-size: 10px;
+  }
+  &-comment {
+    display: flex;
+  }
+  &-img {
+    width: 10px;
+  }
+  &-brand {
+    color: white;
+    font-weight: 700;
+  }
+  &-gallery {
+    margin: 20px 0;
+  }
+  &-priceCount {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  &-price {
+    font-size: 30px;
+    font-family: 'Aeroport-Medium';
+  }
+  &-delivery {
+    display: flex;
+    border-top: 0.5px solid;
+    border-image: linear-gradient(to right, #5584ff, #9d60ff) 47% 0%;
+    padding: 30px 0;
+  }
+  &-deliveryImg {
+    margin-right: 12px;
+  }
+  &-deliveryInfo {
+    color: #979797;
+    font-weight: 300;
+  }
+  &-infoBtn {
+    background: #ff0100;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+}

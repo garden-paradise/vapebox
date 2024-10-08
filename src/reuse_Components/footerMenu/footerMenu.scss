@@ -1,0 +1,35 @@
+.topmenu {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+}
+
+header a {
+  text-decoration: none;
+  display: block;
+  transition: 0.3s ease-in-out;
+}
+.topmenu li a:hover {
+  color: #d5b45b;
+}
+.submenu {
+  background: #273037;
+  position: absolute;
+  z-index: 5;
+  transform: scaleY(0);
+  transform-origin: 0 0;
+  transition: 0.5s ease-in-out;
+  .submenu_li {
+    list-style-type: none;
+  }
+}
+.submenu_a {
+  list-style-type: none;
+  color: white;
+  padding: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.topmenu > li:hover .submenu {
+  opacity: 1;
+  transform: scaleY(1);
+}

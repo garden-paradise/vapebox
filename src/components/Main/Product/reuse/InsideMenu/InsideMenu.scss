@@ -1,0 +1,148 @@
+.insideMenu {
+  &-nav {
+    height: 80px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 100px;
+    color: #979797;
+  }
+  &-ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    list-style-type: none;
+  }
+  &-li {
+    margin: 0 4vw;
+    cursor: pointer;
+  }
+  &-liActive {
+    border-bottom: 2px solid black;
+    color: black;
+  }
+  &-about {
+    display: flex;
+  }
+  &-about div:nth-of-type(1) {
+    margin-right: 100px;
+    max-width: 690px;
+  }
+  &-aboutComplect span {
+    color: #c4c4c4;
+  }
+  &-characteristicInfos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 400px));
+    grid-gap: 20px 50px;
+  }
+  &-characteristicInfo {
+    display: flex;
+    justify-content: space-between;
+  }
+  &-characteristicInfo div:nth-of-type(1) {
+    color: #c4c4c4;
+  }
+  &-commentsSubtitle {
+    color: white;
+  }
+  &-commentsLink {
+    font-weight: 700;
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  &-commentsBlock {
+    width: 775px;
+    height: 236px;
+    background-color: white;
+    border-radius: 5px;
+    margin: 30px 0 66px;
+    padding: 0 12px;
+  }
+  &-commentBlock {
+    background: #c4c4c4;
+    border-radius: 10px;
+    width: 590px;
+    height: 200px;
+  }
+  &-input {
+    width: 750px;
+    height: 100px;
+    border: 0.5px solid #979797;
+    margin: 20px auto 0;
+    border-radius: 5px;
+  }
+  &-stars {
+    display: flex;
+    margin: 15px 0;
+  }
+  &-stars img {
+    width: 24px;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+  &-btn {
+    margin: 0 auto;
+    color: white;
+    background: #b6b6b6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-commentsAll {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    grid-gap: 30px;
+  }
+  &-comment {
+    width: 576px;
+    height: 209px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    color: black;
+  }
+  &-commentUp {
+    display: flex;
+  }
+  &-commentUpTitle {
+    font-family: 'Aeroport-Medium';
+    font-size: 20px;
+    margin-right: 10px;
+  }
+  &-commentUpStars {
+    display: flex;
+    align-items: center;
+  }
+  &-commentUpStars img {
+    width: 12px;
+    height: 12px;
+    margin-right: 3px;
+  }
+  &-commentMiddle {
+    margin: 6px 0 20px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .insideMenu {
+    &-about div:nth-of-type(1) {
+      margin-right: 0;
+    }
+    &-commentBlock {
+      max-width: 590px;
+    }
+  }
+}
+@media (max-width: 480px) {
+  .insideMenu {
+    &-characteristicInfo {
+      font-size: 14px;
+    }
+  }
+}

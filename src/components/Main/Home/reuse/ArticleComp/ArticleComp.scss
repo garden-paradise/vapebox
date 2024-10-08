@@ -1,0 +1,31 @@
+.articlesComp {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 590px));
+  grid-gap: 20px;
+  &-article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #323232;
+    padding: 25px 18px;
+    border-radius: 10px;
+  }
+  &-info {
+    margin-top: 30px;
+  }
+  &-link {
+    font-size: 30px;
+    font-family: 'Aeroport-Bold';
+  }
+}
+
+@media (max-width: 1199px) {
+  .articlesComp {
+    grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+  }
+}
+@media (max-width: 480px) {
+  .articlesComp {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  }
+}

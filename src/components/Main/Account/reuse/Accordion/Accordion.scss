@@ -1,0 +1,22 @@
+.CustomTriggerCSS,
+.CustomTriggerCSS_open {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  cursor: pointer;
+}
+.Collapsible {
+  color: black;
+}
+.Collapsible:not(:last-child) {
+  border-bottom: 1px solid #c4c4c4;
+}
+.Collapsible__trigger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Collapsible__trigger.is-open img {
+  transform: rotate(180deg);
+  transition: 0.5s;
+}

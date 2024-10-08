@@ -1,0 +1,251 @@
+@mixin Display {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin Width {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.headerBig {
+  &-bgdRed {
+    background-color: #ec213e;
+  }
+  &-bgdWhite {
+    background-color: #ffffff;
+  }
+  &-sec1 {
+    padding: 15px 0 13px;
+    color: white;
+    font-size: 16px;
+    @include Display;
+    @include Width;
+  }
+  &-sec1Right {
+    display: flex;
+    align-items: center;
+  }
+  &-sec1RightShop {
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+  }
+  &-sec1RightTitle {
+    margin-left: 25px;
+  }
+  &-sec1RightTel {
+    margin-left: 75px;
+    color: white;
+    font-size: 18px;
+    font-family: 'Roboto-Regular';
+  }
+  &-sec2 {
+    padding: 30px 0;
+    background: #1f1f1f;
+    @include Display;
+    @include Width;
+  }
+  &-sec2Form {
+    display: flex;
+    margin-left: 50px;
+  }
+  &-sec2FormInput {
+    border: 0;
+    width: 610px;
+    height: 38px;
+    border-radius: 20px;
+  }
+  &-sec2FormBtn {
+    position: relative;
+    right: 46px;
+    width: 53px;
+    height: 38px;
+    background: #ec213e;
+    border-radius: 20px;
+    border: 0;
+    cursor: pointer;
+    background-image: url('../../../../images/header/MagnifyingGlass.svg');
+    background-repeat: no-repeat;
+    background-position: 13px 5px;
+  }
+  &-sec2Right {
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    position: relative;
+  }
+  &-sec2RightBasket {
+    width: 24px;
+    height: 24px;
+    background: red;
+    color: white;
+    border-radius: 50%;
+    line-height: 24px;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 15px;
+    left: 75px;
+    z-index: 5;
+  }
+  &-sec2Right:not(:last-child) {
+    margin-right: 5vw;
+  }
+  &-sec3 {
+    padding: 17px 0 11px;
+    background-color: white;
+    @include Width;
+  }
+  &-userImg {
+    cursor: pointer;
+  }
+}
+
+.form {
+  position: absolute;
+  padding-top: 10px;
+  right: -66px;
+  display: none;
+  &-form {
+    width: 285px;
+    background: white;
+    padding: 30px 20px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  &-title {
+    font-size: 20px;
+    font-family: 'Aeroport-Medium';
+    margin-bottom: 10px;
+  }
+  &-subtitle {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  &-input {
+    width: 100%;
+    height: 50px;
+    border: 0;
+    background: #e2dfdf;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  &-inputDiv {
+    position: relative;
+  }
+  &-inputDiv img {
+    position: absolute;
+    top: 13px;
+    right: 10px;
+    cursor: pointer;
+  }
+  &-inputDiv img:hover {
+    opacity: 0.5;
+  }
+  &-btn {
+    margin-top: 10px;
+    width: 100%;
+    background: #3c4043;
+    color: white;
+  }
+  &-infoTop {
+    padding: 15px 0 6px;
+  }
+  &-info {
+    color: #979797;
+    font-size: 10px;
+  }
+  &-info div {
+    margin-bottom: 6px;
+  }
+  &-info span:first-child {
+    margin-right: 10px;
+  }
+  &-info span:last-child {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  &-block {
+    vertical-align: middle;
+    line-height: 50px;
+    width: 100%;
+    border-radius: 5px;
+    background: #3c4043;
+    color: white;
+    font-size: 16px;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  &-exit {
+    cursor: pointer;
+    font-family: 'Aeroport-Medium';
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  &-error {
+    border: 1px solid red;
+  }
+}
+
+.formOpen {
+  display: block;
+  z-index: 5;
+}
+
+.tabs li {
+  margin-left: 200px;
+  width: 10px;
+  position: relative;
+  list-style: none;
+}
+.tabs a {
+  height: 10px;
+  background: #ffffff;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.tabs li:before,
+.tabs li:after,
+.tabs li a:before,
+.tabs li a:after {
+  position: absolute;
+  bottom: 0;
+}
+.tabs li:last-child:after,
+.tabs li:last-child a:after,
+.tabs li:first-child:before,
+.tabs li:first-child a:before,
+.tabs .active:after,
+.tabs .active:before,
+.tabs .active a:after,
+.tabs .active a:before {
+  content: ' ';
+}
+.tabs li:before,
+.tabs li:after {
+  background: #ffffff;
+  width: 15px;
+  height: 5px;
+}
+.tabs li:before {
+  left: -7px;
+}
+.tabs li:after {
+  right: -7px;
+}
+.tabs li a:after,
+.tabs li a:before {
+  width: 20px;
+  height: 10px;
+  border-radius: 20px;
+  background: #1f1f1f;
+  z-index: 2;
+}
+.tabs li a:before {
+  left: -20px;
+}
+.tabs li a:after {
+  right: -20px;
+}

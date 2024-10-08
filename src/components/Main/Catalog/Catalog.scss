@@ -1,0 +1,268 @@
+.catalog {
+  &-info {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    margin: 50px 0 22px;
+  }
+  &-infoTitle {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &-infoTitleFilter {
+    display: flex;
+  }
+  &-infoTitleImg {
+    margin-right: 24px;
+  }
+  &-rightInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 900px;
+  }
+  &-sec {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+  }
+  &-left {
+    margin-right: 15px;
+  }
+  &-leftBlock {
+    width: 285px;
+    height: auto;
+    border-radius: 20px;
+    background-color: #ffffff;
+    color: black;
+    padding-bottom: 30px;
+  }
+  &-leftBlockSale {
+    border-bottom: 1px solid #c4c4c4;
+    padding: 30px 20px;
+  }
+  &-blockFilter {
+    padding: 5px 20px;
+  }
+  &-myRange {
+    width: 100%;
+  }
+  &-myRange div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-inputRange {
+    width: 100px;
+    height: 40px;
+    background: #fffffe;
+    border: 0.5px solid #000000;
+    border-radius: 5px;
+  }
+  &-slider {
+    border-radius: 5px;
+    margin-top: 17px;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 7px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+  }
+  &-slider:hover {
+    opacity: 1;
+  }
+  &-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background: red;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  &-slider::-moz-range-thumb {
+    width: 25px;
+    height: 7px;
+    background: red;
+    cursor: pointer;
+  }
+  &-blockFilter:last-child {
+    padding-bottom: 20px;
+  }
+  &-leftBtn {
+    color: white;
+    background: #3c4043;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto 30px;
+  }
+  &-leftBlockReset {
+    font-family: 'Aeroport-Medium';
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  &-right {
+    width: 100%;
+  }
+  &-pageSwitcher {
+    width: 600px;
+    word-wrap: break-word;
+    margin: 50px auto 0;
+    text-align: center;
+    color: #8a8989;
+  }
+  &-numPage {
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  &-numPageActive {
+    color: red;
+  }
+
+  &-numPage:hover {
+    color: red;
+  }
+  &-rightTitle {
+    width: 900px;
+    text-align: center;
+    margin-top: 50px;
+  }
+}
+
+.myControlClassName {
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.myMenuClassName {
+  font-size: 16px;
+  cursor: pointer;
+  // position: absolute;
+  // right: 138px;
+  // right: 10vw;
+  margin-top: 10px;
+  z-index: 4;
+  border: 0.5px solid rgb(144, 138, 138);
+}
+.myOptionClassName {
+  background: #ffffff;
+  height: 50px;
+  width: 130px;
+  font-size: 16px;
+  color: black;
+  padding: 0px 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 0.5px solid rgb(144, 138, 138);
+}
+.arrow-closed,
+.arrow-open {
+  border: solid rgb(255, 255, 255);
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 4px;
+  margin-left: 30px;
+}
+.arrow-closed {
+  transform: rotate(45deg);
+  transition: 0.5s;
+  margin-bottom: 3px;
+}
+.arrow-open {
+  transform: rotate(225deg);
+  transition: 0.5s;
+}
+
+@media (max-width: 1200px) {
+  .catalog {
+    &-rightInfo {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
+}
+@media (max-width: 950px) {
+  .catalog {
+    &-rightInfo {
+      max-width: 300px;
+      justify-content: end;
+    }
+    &-rightInfoFind {
+      display: none;
+    }
+    &-leftInfoCount {
+      display: block;
+    }
+  }
+  .Dropdown-root {
+    width: 100%;
+  }
+  .myOptionClassName {
+    width: 300px;
+  }
+}
+@media (max-width: 650px) {
+  section .Container .catalog {
+    padding: 0;
+  }
+  .catalog {
+    &-sec {
+      flex-direction: column;
+      padding: 0;
+    }
+    &-left {
+      margin: 0;
+    }
+    &-rightInfo {
+      max-width: 100%;
+    }
+    &-leftBlock {
+      display: none;
+    }
+    &-leftInfoCount {
+      display: none;
+    }
+    &-infoTitleFilter {
+      cursor: pointer;
+    }
+  }
+  // .Dropdown-root {
+  //   width: 100px;
+  // }
+  // .myMenuClassName {
+  //   right: 23px;
+  // }
+  // .myOptionClassName {
+  //   width: 130px;
+  // }
+}
+
+@media (max-width: 480px) {
+  .catalog {
+    &-info {
+      font-size: 14px;
+    }
+  }
+  .myControlClassName {
+    font-size: 14px;
+  }
+  .myMenuClassName {
+    font-size: 14px;
+    right: 12px;
+  }
+  .myOptionClassName {
+    font-size: 14px;
+    height: 40px;
+    padding: 0px 10px;
+  }
+}

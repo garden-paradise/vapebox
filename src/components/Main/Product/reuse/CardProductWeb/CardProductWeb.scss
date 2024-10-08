@@ -1,0 +1,86 @@
+@import '~react-image-gallery/styles/scss/image-gallery.scss';
+
+.cardProductWeb {
+  &-sec1 {
+    margin: 44px 0 100px;
+    display: flex;
+    font-weight: 700;
+    font-size: 16px;
+  }
+  &-sec1Slider {
+    width: 600px;
+    margin-right: 20px;
+  }
+  &-sec1SliderInfo {
+    margin: 20px 0;
+  }
+  &-infoName {
+    font-size: 40px;
+  }
+  &-infoSubtitle {
+    display: flex;
+    justify-content: space-between;
+    color: rgba(151, 151, 151, 1);
+    margin: 5px 0 30px;
+  }
+  &-infoSubtitleImg {
+    display: flex;
+  }
+  &-infoSubtitleBrand {
+    color: white;
+    font-weight: 700;
+  }
+  &-infoBtn {
+    background: #ff0100;
+    color: white;
+    margin: 50px 0 30px;
+  }
+  // &-infoDeliveryTitle {
+  //   font-size: 18px;
+  //   font-family: 'Aeroport-Medium';
+  // }
+  &-infoDeliveryDivsOption {
+    display: flex;
+  }
+  &-infoDeliveryOption {
+    display: flex;
+    // margin: 20px 20px 0 0;
+  }
+  &-infoDeliveryOptionImg {
+    margin-right: 12px;
+  }
+  &-infoDeliveryDate {
+    color: #979797;
+    font-weight: 300;
+  }
+}
+
+@media (max-width: 1100px) {
+  .cardProductWeb {
+    &-sec1SliderInfo {
+      margin: 0;
+    }
+    &-infoBtn {
+      margin: 20px 0;
+    }
+  }
+}
+@media (max-width: 1000px) {
+  .cardProductWeb {
+    &-sec1 {
+      flex-direction: column;
+      align-items: center;
+      margin: 50px 0;
+    }
+    &-sec1SliderInfo {
+      margin-top: 50px;
+    }
+  }
+}
+@media (max-width: 650px) {
+  .cardProductWeb {
+    &-sec1Slider {
+      width: 90vw;
+    }
+  }
+}

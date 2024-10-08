@@ -1,0 +1,43 @@
+.colorCircle {
+  &-circles {
+    display: flex;
+    margin: 20px 0 30px;
+  }
+  &-circle {
+    margin-right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+}
+.block1 {
+  background: red;
+}
+.block2 {
+  background: rgb(240, 94, 94);
+}
+.block3 {
+  background: rgba(237, 247, 53, 0.843);
+}
+.block4 {
+  background: rgb(83, 214, 83);
+}
+.block5 {
+  background: green;
+}
+
+@media (max-width: 480px) {
+  .colorCircle {
+    &-circles {
+      margin: 20px 0 30px;
+    }
+    &-circle {
+      margin-right: 10px;
+      width: 32px;
+      height: 32px;
+    }
+    &-title {
+      font-size: 12px;
+    }
+  }
+}

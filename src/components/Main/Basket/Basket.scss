@@ -1,0 +1,380 @@
+@mixin Collapse {
+  width: 770px;
+  border-end-end-radius: 10px;
+  border-end-start-radius: 10px;
+  background-color: white;
+  font-family: 'Aeroport-Medium';
+  padding: 0 30px;
+}
+@mixin Form {
+  background-color: #f6f6f6;
+  border: 0;
+  border-radius: 5px;
+  font-family: 'Aeroport-Light';
+}
+@mixin Basket {
+  max-width: 770px;
+  height: 100px;
+  font-size: 28px;
+  font-family: 'Aeroport-Medium';
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  cursor: pointer;
+}
+@mixin Circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.basket {
+  color: white;
+  &-section {
+    display: flex;
+    justify-content: space-between;
+    color: #000000;
+  }
+  &-noProducts {
+    font-size: 24px;
+    color: white;
+  }
+  &-deliveryCollapsible {
+    @include Collapse;
+    height: 370px;
+  }
+  &-deliveryCityTitle {
+    padding: 0px 0 20px;
+  }
+  &-deliveryCityInput {
+    width: 560px;
+    height: 50px;
+    background-color: #3c4043;
+    color: white;
+    padding: 0 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Aeroport-Light';
+  }
+  // &-deliveryCityInputClose {
+  //   cursor: pointer;
+  //   width: 50px;
+  // }
+  &-deliveryDeliveryTitle {
+    font-size: 24px;
+    padding: 30px 0 25px;
+  }
+  &-deliveryDelivery {
+    max-width: 340px;
+    height: 150px;
+    background-color: #3c4043;
+    color: white;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 5px;
+  }
+  &-deliveryDeliveryForm {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &-deliveryDeliveryCircle + label:before {
+    content: '\2714';
+    margin-right: 20px;
+    width: 20px;
+    height: 20px;
+    background-color: #7d1717;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: bottom;
+    color: transparent;
+    transition: 0.2s;
+  }
+  &-deliveryDeliveryCircle:checked + label:before {
+    background-color: red;
+    border-color: red;
+    color: #fff;
+    font-size: 11px;
+    padding: 2.4px 5.5px;
+  }
+  input[type='checkbox'].basket-deliveryDeliveryCheckbox + label:before {
+    content: '\2714';
+    width: 24px;
+    height: 24px;
+    background: inherit;
+    border: 1px solid white;
+    border-radius: 50%;
+  }
+  input[type='checkbox']:checked + label:before {
+    background-color: red;
+    border-color: red;
+    color: #fff;
+    font-size: 11px;
+    padding: 2.6px 5.8px;
+  }
+  &-deliveryDeliveryBron {
+    font-size: 14px;
+    color: #979797;
+    padding: 10px 0;
+  }
+  &-payCollapsible {
+    @include Collapse;
+    height: 300px;
+  }
+  &-payTitle {
+    color: #979797;
+    margin-bottom: 30px;
+  }
+  &-payChange {
+    font-size: 24px;
+    margin-bottom: 25px;
+  }
+  &-paySubtitle {
+    font-size: 14px;
+    color: #e7e7e7;
+    margin-top: 10px;
+  }
+  &-recipientCollapsible {
+    @include Collapse;
+    height: auto;
+  }
+  &-recipientTitle {
+    color: #979797;
+    margin-bottom: 40px;
+  }
+  &-recipientUrl {
+    color: #979797;
+    text-decoration: underline;
+  }
+  &-recipientForms {
+    display: flex;
+    flex-direction: column;
+  }
+  &-recipientFormsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 255px);
+    grid-gap: 20px 60px;
+  }
+  &-recipientForm {
+    height: 50px;
+    @include Form;
+  }
+  &-recipientFormError {
+    border: 2px solid red;
+  }
+  &-recipientFormComment {
+    @include Form;
+    height: 110px;
+    max-width: 570px;
+    margin: 20px 0;
+  }
+  &-recipientFormLabel {
+    font-size: 14px;
+    color: #979797;
+  }
+  &-recipientFormBtn {
+    background: #3c4043;
+    color: white;
+    margin-top: 30px;
+    position: relative;
+    left: 72%;
+    margin-bottom: 30px;
+  }
+  &-checkout {
+    width: 388px;
+    height: 438px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #000000;
+  }
+  &-checkoutTotal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 24px;
+  }
+  &-checkoutTotalTitle {
+    font-size: 16px;
+  }
+  &-checkoutTotalSum {
+    font-size: 22px;
+  }
+  &-checkoutFilled {
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    padding: 20px 0;
+  }
+  &-checkoutFilledItem {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+  }
+  &-checkoutFilledCircle {
+    @include Circle;
+    background: #f6f6f6;
+  }
+  &-checkoutFilledCircleRed {
+    @include Circle;
+    color: white;
+    background: red;
+  }
+  &-checkoutFilledTitle {
+    font-size: 16px;
+  }
+  &-checkoutItog {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Aeroport';
+    margin: 20px 0 30px;
+  }
+  &-checkoutItogTitle {
+    font-size: 20px;
+  }
+  &-checkoutItogSum {
+    font-size: 22px;
+  }
+  &-checkoutBtnFalse {
+    color: white;
+    background: #c4c4c4;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &-checkoutBtnTrue {
+    color: white;
+    background: #3c4043;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.Basket {
+  margin-bottom: 30px;
+}
+.BasketTrigger,
+.BasketTriggerOpen {
+  @include Basket;
+}
+.BasketTriggerOpen {
+  border-end-end-radius: 0;
+  border-end-start-radius: 0;
+}
+.BasketInnerClassName {
+  display: none;
+}
+.BasketClosed {
+  color: #979797;
+  margin-bottom: 30px;
+}
+.BasketTriggerClosed {
+  @include Basket;
+  color: #979797;
+}
+
+@media (max-width: 1199px) {
+  .basket {
+    &-section {
+      flex-direction: column;
+    }
+    &-recipientFormBtn {
+      left: 0;
+    }
+  }
+}
+@media (max-width: 800px) {
+  .basket {
+    &-recipientCollapsible {
+      width: 100%;
+    }
+  }
+}
+@media (max-width: 680px) {
+  .basket {
+    &-deliveryCityInput {
+      width: 80vw;
+    }
+    &-recipientFormsGrid {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+@media (max-width: 480px) {
+  section .basket {
+    padding: 0;
+  }
+  section .basket .title,
+  section .basket .headerSmall,
+  section .basket .arrowTitle {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .basket {
+    &-deliveryDeliveryTitle,
+    &-payChange {
+      font-size: 16px;
+    }
+    &-deliveryCityInput {
+      font-size: 14px;
+      height: 40px;
+      padding: 0 12px;
+    }
+    &-deliveryDelivery {
+      width: 90vw;
+      padding: 0 12px;
+    }
+    &-recipientTitle,
+    &-checkoutTotalTitle {
+      font-size: 14px;
+    }
+    &-recipientFormsGrid {
+      grid-template-columns: repeat(auto-fill, 100%);
+      grid-gap: 10px;
+    }
+    &-recipientFormComment {
+      margin-top: 10px;
+    }
+    &-recipientFormLabel {
+      font-size: 12px;
+    }
+    &-checkout {
+      width: 100%;
+      border-radius: 0;
+      padding: 0 16px;
+    }
+    &-deliveryCollapsible,
+    &-payCollapsible,
+    &-recipientCollapsible {
+      border-radius: 0;
+      padding: 0 16px;
+    }
+    &-recipientFormBtn {
+      margin: 30px auto;
+    }
+  }
+  .BasketTrigger,
+  .BasketTriggerOpen,
+  .BasketTriggerClosed {
+    font-size: 20px;
+    border-radius: 0;
+    padding: 0 16px;
+    height: 60px;
+  }
+}

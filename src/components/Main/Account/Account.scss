@@ -1,0 +1,360 @@
+@mixin Collapse {
+  width: 770px;
+  border-end-end-radius: 10px;
+  border-end-start-radius: 10px;
+  background-color: white;
+  font-family: 'Aeroport-Medium';
+  padding: 0 30px;
+}
+@mixin Form {
+  background-color: #f6f6f6;
+  border: 0;
+  border-radius: 5px;
+  font-family: 'Aeroport-Light';
+}
+@mixin Grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 255px);
+  grid-gap: 20px;
+}
+@mixin Title {
+  font-size: 30px;
+  color: white;
+}
+@mixin SubTitle {
+  display: grid;
+  font-size: 16px;
+  color: #d9d9d9;
+  padding-bottom: 20px;
+  border-bottom: 0.5px solid;
+  border-image: linear-gradient(to right, #5584ff, #9d60ff) 47% 0%;
+  width: 838px;
+  margin-bottom: 30px;
+}
+
+.account {
+  &-section {
+    display: flex;
+    justify-content: space-between;
+  }
+  .account_left {
+    &-blockName {
+      width: 305px;
+      color: white;
+      background-color: #3c4043;
+      height: 138px;
+      border-radius: 5px 5px 0 0;
+      padding: 30px;
+    }
+    &-name {
+      font-family: 'Aeroport-Medium';
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    &-blockMenu {
+      border-radius: 0 0 5px 5px;
+      background-color: white;
+    }
+    &-menu {
+      height: 100px;
+      display: flex;
+      align-items: center;
+      padding-left: 30px;
+      cursor: pointer;
+      text-decoration: none;
+      color: black;
+    }
+    &-menu:hover {
+      background-color: #e3e3e3;
+    }
+    &-menuActive {
+      background-color: #e3e3e3;
+    }
+  }
+  .account_rightBlock {
+    width: 838px;
+  }
+  .account_forms {
+    display: flex;
+    .account_right {
+      display: flex;
+      flex-direction: column;
+      &-formPassword {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+      }
+      &-formInfoTitle {
+        @include Title;
+        margin-bottom: 30px;
+      }
+      &-formPassTitle {
+        margin-bottom: 90px;
+      }
+      &-formInfo {
+        margin: 0 81px 0 29px;
+      }
+      &-forms {
+        @include Grid;
+        width: 530px;
+      }
+      &-formsAdress {
+        @include Grid;
+        grid-template-columns: 357px 154px;
+      }
+      &-formApartament {
+        width: 173px;
+      }
+      &-form {
+        height: 50px;
+        @include Form;
+      }
+      &-formEmail {
+        @include Form;
+        background: rgba(255, 255, 255, 0.75);
+      }
+      &-formPass {
+        width: 255px;
+      }
+      &-formPass:not(:nth-child(4)) {
+        margin-bottom: 20px;
+      }
+      &-formLong {
+        width: 357px;
+      }
+      &-formShort {
+        width: 154px;
+      }
+      &-formError {
+        border: 2px solid red;
+      }
+      &-formLabel {
+        font-size: 14px;
+        color: #d9d9d9;
+        margin-bottom: 50px;
+      }
+      &-formBtn {
+        background-color: #ff0100;
+        color: white;
+        margin-top: 33px;
+      }
+      &-error {
+        border: red solid 1.5px;
+      }
+      &-errorRepeat {
+        border: red solid 1.5px;
+      }
+      &-formTextError {
+        position: absolute;
+        top: 276px;
+        color: white;
+        font-size: 14px;
+      }
+    }
+  }
+  .account_myOrder {
+    &-title {
+      @include Title;
+      margin-bottom: 40px;
+    }
+    &-subTitle {
+      @include SubTitle;
+      grid-template-columns: 160px 305px 95px 140px 70px;
+    }
+  }
+  .account_favorites {
+    &-subTitle {
+      @include SubTitle;
+      grid-template-columns: 200px 380px 95px;
+      margin: 0;
+    }
+    &-noProducts {
+      color: white;
+      font-size: 24px;
+    }
+  }
+}
+.DropdownRoot {
+  width: 305px;
+}
+.DropdownAccountControl {
+  padding: 0px 30px;
+  width: 305px;
+  background: white;
+  height: 80px;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.DropdownAccountMenu {
+  background: white;
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  z-index: 4;
+  width: 305px;
+}
+.DropdownAccountOptions {
+  width: 305px;
+  background: #ffffff;
+  height: 80px;
+  font-size: 18px;
+  padding: 0px 30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-right: 1px solid rgb(144, 138, 138);
+  border-left: 1px solid rgb(144, 138, 138);
+  border-top: 1px solid rgb(144, 138, 138);
+}
+.DropdownAccountArrowClose,
+.DropdownAccountArrowOpen {
+  border: solid rgb(0, 0, 0);
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 5px;
+}
+.DropdownAccountArrowClose {
+  top: 10px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+.DropdownAccountArrowOpen {
+  top: 14px;
+  transform: rotate(-455deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+@media (max-width: 1199px) {
+  .account {
+    &-section {
+      flex-direction: column;
+    }
+    .account_forms,
+    .account_myOrder,
+    .account_favorites {
+      margin-top: 50px;
+    }
+    .account_rightBlock {
+      width: 100%;
+    }
+    .account_forms {
+      flex-wrap: wrap;
+      .account_right {
+        &-formInfo {
+          margin: 0 30px 0 0;
+        }
+        &-formPassTitle {
+          margin-bottom: 30px;
+        }
+      }
+    }
+    .account_myOrder,
+    .account_favorites {
+      &-subTitle {
+        padding: 0;
+        width: 100%;
+        max-width: 838px;
+      }
+      &-subTitle div {
+        display: none;
+      }
+    }
+  }
+}
+@media (max-width: 850px) {
+  .account {
+    .account_forms {
+      .account_right {
+        &-formPassword {
+          margin-top: 50px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 580px) {
+  .account {
+    padding: 0;
+  }
+  .account .title,
+  .account .account_left,
+  .account .account_forms,
+  .account .account_myOrder,
+  .account .account_favorites {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .account {
+    .account_forms {
+      .account_right {
+        &-forms {
+          grid-template-columns: 1fr;
+          grid-gap: 10px;
+          width: 100%;
+        }
+        &-formInfo,
+        &-formShort,
+        &-formLong,
+        &-formApartament,
+        &-formPass {
+          margin: 0;
+          width: 100%;
+        }
+        &-formPassword {
+          width: 100%;
+        }
+        &-formPass:not(:nth-child(4)) {
+          margin-bottom: 10px;
+        }
+        &-formsAdress {
+          grid-template-columns: 1fr;
+          grid-gap: 10px;
+          width: 100%;
+        }
+        &-formInfoTitle {
+          font-size: 20px;
+        }
+        &-formLabel {
+          font-size: 12px;
+        }
+        &-formEmail {
+          height: 50px;
+        }
+      }
+    }
+    .account_favorites,
+    .account_myOrder {
+      &-title {
+        font-size: 20px;
+      }
+    }
+  }
+}
+@media (max-width: 480px) {
+  .account .title,
+  .account .account_left,
+  .account .account_forms,
+  .account .account_myOrder,
+  .account .account_favorites {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .account {
+    .account_left {
+      &-blockName,
+      .DropdownAccountControl,
+      .DropdownAccountMenu,
+      .DropdownAccountOptions {
+        width: 90vw;
+      }
+    }
+    .account_favorites {
+      &-noProducts {
+        font-size: 16px;
+      }
+    }
+  }
+}

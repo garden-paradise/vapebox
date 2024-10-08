@@ -1,0 +1,23 @@
+.adressMap {
+  width: 440px;
+  height: 211px;
+  background-color: #333333;
+  color: white;
+  font-size: 16px;
+  font-family: 'Aeroport';
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  line-height: 33px;
+  &-name {
+    margin-bottom: 16px;
+    font-family: 'Aeroport-Medium';
+    font-size: 20px;
+  }
+  &-open{
+    font-size: 22px;
+  }
+}

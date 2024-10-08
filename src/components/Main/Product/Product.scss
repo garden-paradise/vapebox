@@ -1,0 +1,71 @@
+@import '~react-image-gallery/styles/scss/image-gallery.scss';
+
+.product {
+  color: white;
+  &-productFonImg {
+    margin-left: 32vw;
+  }
+  &-sec1 {
+    margin: 44px 0 100px;
+    display: flex;
+    font-weight: 700;
+    font-size: 16px;
+  }
+  &-img {
+    width: 488px;
+    margin-right: 50px;
+  }
+  &-sec1SliderInfo {
+    margin: 20px 0;
+  }
+  &-infoName {
+    font-size: 40px;
+  }
+  &-infoSubtitle {
+    display: flex;
+    justify-content: space-between;
+    color: rgba(151, 151, 151, 1);
+    margin: 5px 0 30px;
+  }
+  &-infoSubtitleImg {
+    display: flex;
+    margin: 0 40px;
+  }
+  &-infoSubtitleImg img {
+    width: 13px;
+  }
+  &-infoSubtitleBrand {
+    color: white;
+    font-weight: 700;
+  }
+  &-addBtn {
+    background: #ff0100;
+    color: white;
+    margin: 50px 0 30px;
+    cursor: pointer;
+  }
+  &-deleteBtn {
+    background: #e25a5a;
+    color: white;
+    margin: 50px 0 30px;
+    cursor: pointer;
+  }
+  // &-infoDeliveryTitle {
+  //   font-size: 18px;
+  //   font-family: 'Aeroport-Medium';
+  // }
+  &-infoDeliveryDivsOption {
+    display: flex;
+  }
+  &-infoDeliveryOption {
+    display: flex;
+    align-items: center;
+  }
+  &-infoDeliveryOptionImg {
+    margin-right: 12px;
+  }
+  &-infoDeliveryDate {
+    color: #979797;
+    font-weight: 300;
+  }
+}
